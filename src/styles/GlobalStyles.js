@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
     font-weight: normal;
   }
 
-  h1, h2 {
+  h1, h2, h3 {
     font-family: ${props => props.theme.font.primary};
   }
 
@@ -29,12 +29,13 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h3 {
-    ${props => props.theme.font_size.large};
+    ${props => props.theme.font_size.regular};
   }
 
   p {
-    ${props => props.theme.font_size.regular};
+    ${props => props.theme.font_size.xsmall};
     color: ${props => props.theme.color.black.light};
+    font-family: 
   }
 
   @media (max-width: ${props => props.theme.screen.sm}) {

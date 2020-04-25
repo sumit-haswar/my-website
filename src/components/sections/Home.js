@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
 
-const About = () => (
+const Home = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -44,7 +44,7 @@ const About = () => (
       }
     `}
     render={data => (
-      <Section id="about">
+      <Section id="home">
         <Container>
           <Grid inverse>
             {/*<Art>*/}
@@ -75,8 +75,8 @@ const Grid = styled.div`
   margin: 24px 0;
 
   ${props =>
-    props.inverse &&
-    `
+  props.inverse &&
+  `
     text-align: left;
     grid-template-columns: 3fr 1fr;
   `}
@@ -95,8 +95,8 @@ const Grid = styled.div`
     }
 
     ${props =>
-      props.inverse &&
-      `
+  props.inverse &&
+  `
         ${Art} {
           order: 2;
         }
@@ -110,4 +110,4 @@ const Art = styled.figure`
   width: 100%;
 `;
 
-export default About;
+export default Home;
