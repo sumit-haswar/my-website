@@ -14,7 +14,7 @@ const About = () => (
           name: { eq: "fast" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
+            fluid(maxWidth: 860) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -25,7 +25,7 @@ const About = () => (
           name: { eq: "learn_yourself" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
+            fluid(maxWidth: 860) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -36,7 +36,7 @@ const About = () => (
           name: { eq: "ideas" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
+            fluid(maxWidth: 860) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -46,47 +46,18 @@ const About = () => (
     render={data => (
       <Section id="about">
         <Container>
-          <Grid>
-            <div>
-              <h2>Speed past the competition</h2>
-              <p>
-                Gatsby.js builds the fastest possible website. Instead of
-                waiting to generate pages when requested, pre-build pages and
-                lift them into a global cloud of servers — ready to be delivered
-                instantly to your users wherever they are.
-              </p>
-            </div>
-            <Art>
-              <Img fluid={data.art_fast.childImageSharp.fluid} />
-            </Art>
-          </Grid>
           <Grid inverse>
-            <Art>
-              <Img fluid={data.art_learn.childImageSharp.fluid} />
-            </Art>
+            {/*<Art>*/}
+            {/*  <Img fluid={data.art_learn.childImageSharp.fluid} />*/}
+            {/*</Art>*/}
             <div>
-              <h2>Nothing new to learn here</h2>
+              <h2>Hi !</h2>
               <p>
-                Enjoy the power of the latest web technologies – React.js ,
-                Webpack , modern JavaScript and CSS and more — all set up and
-                waiting for you to start building.
+                I live in San Francisco and work for <a rel="noreferrer noopener" style={{ color: '#8bd8ed', textDecoration: 'inherit'}} href={'https://www.minted.com'} target={'_blank'}>Minted</a> as a Software Developer.
+                <br/>
+                I grew up in India and studied Computer Science at Cal. State Long Beach and Mumbai University.
               </p>
             </div>
-          </Grid>
-          <Grid>
-            <div>
-              <h2>Grow and build your ideas</h2>
-              <p>
-                Waste no more time on tooling and performance. Focus on the the
-                site you want to build and nothing more.
-                <br />
-                <br />
-                Gatsby is fast in every way that matters.
-              </p>
-            </div>
-            <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
-            </Art>
           </Grid>
         </Container>
       </Section>
@@ -97,7 +68,7 @@ const About = () => (
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 3fr 2fr;
-  grid-gap: 40px;
+  grid-gap: 30px;
   text-align: right;
   align-items: center;
   justify-items: center;
@@ -107,7 +78,7 @@ const Grid = styled.div`
     props.inverse &&
     `
     text-align: left;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 3fr 1fr;
   `}
 
   h2 {

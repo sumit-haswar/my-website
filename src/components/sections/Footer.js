@@ -9,19 +9,24 @@ import ExternalLink from '@common/ExternalLink';
 import GithubIcon from '@static/icons/github.svg';
 import InstagramIcon from '@static/icons/instagram.svg';
 import TwitterIcon from '@static/icons/twitter.svg';
+import LinkedInIcon from '@static/icons/linkedin.svg'
 
 const SOCIAL = [
   {
+    icon: LinkedInIcon,
+    link: 'https://www.linkedin.com/in/sumit-haswar-77744715/',
+  },
+  {
     icon: GithubIcon,
-    link: 'https://github.com/ajayns/gatsby-absurd',
+    link: 'https://github.com/sumit-haswar',
   },
   {
     icon: InstagramIcon,
-    link: 'https://instagram.com/ajay_ns',
+    link: 'https://www.instagram.com/sumit_haswar',
   },
   {
     icon: TwitterIcon,
-    link: 'https://twitter.com/ajayns08',
+    link: 'https://twitter.com/blue_floyd_',
   },
 ];
 
@@ -43,23 +48,23 @@ const Footer = () => (
     `}
     render={data => (
       <React.Fragment>
-        <Art>
-          <Img
-            fluid={data.art_pot.childImageSharp.fluid}
-            style={{ width: 480, maxWidth: '100%', marginBottom: -16 }}
-          />
-        </Art>
+        {/*<Art>*/}
+        {/*  <Img*/}
+        {/*    fluid={data.art_pot.childImageSharp.fluid}*/}
+        {/*    style={{ width: 480, maxWidth: '100%', marginBottom: -16 }}*/}
+        {/*  />*/}
+        {/*</Art>*/}
         <FooterWrapper>
           <StyledContainer>
             <Copyright>
-              <h2>Absurd</h2>
-              <span>
-                Illustrations by
-                {` `}
-                <ExternalLink href="https://twitter.com/diana_valeanu">
-                  @diana_valeanu
-                </ExternalLink>
-              </span>
+              {/*<h2>Absurd</h2>*/}
+              {/*<span>*/}
+              {/*  Illustrations by*/}
+              {/*  {` `}*/}
+              {/*  <ExternalLink href="https://twitter.com/diana_valeanu">*/}
+              {/*    @diana_valeanu*/}
+              {/*  </ExternalLink>*/}
+              {/*</span>*/}
             </Copyright>
             <SocialIcons>
               {SOCIAL.map(({ icon, link }) => (

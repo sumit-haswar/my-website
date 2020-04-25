@@ -1,6 +1,6 @@
 const theme = {
   font: {
-    primary: `'Prata', serif`,
+    primary: `'Calibri', serif`,
     secondary: `'Average', serif`,
   },
   font_size: {
