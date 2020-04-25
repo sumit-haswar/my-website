@@ -30,7 +30,8 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
-  padding: 150px 0;
+  padding-top: 90px;
+  padding-bottom: 40px;
   overflow: hidden;
 
   @media (max-width: ${props => props.theme.screen.md}) {
@@ -44,4 +45,16 @@ export const Section = styled.section`
         ? props.theme.color.white.dark
         : props.theme.color.primary
     }`};
+`;
+
+export const Title = styled.div`
+  margin: 0 auto;
+  padding: 0 16px;
+  text-align:center
+
+  ${props =>
+  props.fluid &&
+  `
+    max-width: 1200px !important;
+  `};
 `;

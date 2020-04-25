@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
+import { Link } from "gatsby"
 
 import { Container } from '@components/global';
 import {
@@ -15,20 +16,23 @@ import {
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
 
-// const NAV_ITEMS = [
-//   'About',
-//   'Resume'
-// ];
-
 const NAV_ITEMS = [
   {
-    text:'About',
-    link:''
+    text:'about',
+    link:'/'
   },
   {
-    text:'Resume',
-    link:'/resume'
-  }
+    text:'resume',
+    link:'/resume/'
+  },
+  // {
+  //   text:'work',
+  //   link:'/work/'
+  // },
+  // {
+  //   text:'bookshelf',
+  //   link:'/bookshelf/'
+  // }
 ];
 
 class Navbar extends Component {
@@ -53,9 +57,12 @@ class Navbar extends Component {
   // );
 
   getNavAnchorLink = item => (
-    <AnchorLink href={`${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
+    <Link to={`${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
       {item}
-    </AnchorLink>
+    </Link>
+    // <AnchorLink href={`${item.toLowerCase()}`} on  Click={this.closeMobileMenu}>
+    //   {item}
+    // </AnchorLink>
   );
 
   getNavList = ({ mobile = false }) => (
@@ -79,7 +86,7 @@ class Navbar extends Component {
     return (
       <Nav {...this.props}>
         <StyledContainer>
-          <Brand>Sumit Haswar</Brand>
+          <Brand> <a style={{ color: '#564F62', textDecoration: 'inherit'}} href="/">Sumit Haswar</a></Brand>
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>
               <MenuIcon />

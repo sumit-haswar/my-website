@@ -3,17 +3,13 @@ import React from 'react';
 import Layout from '@common/Layout';
 import Navbar from '@common/Navbar';
 
-import About from '@sections/About';
+import Resume from '@sections/Resume'
 import Footer from '@sections/Footer';
 
 const ResumePage = () => (
   <Layout>
     <Navbar />
-    {/*<Header />*/}
-    <About />
-    {/*<Brands />*/}
-    {/*<Team />*/}
-    {/*<Faq />*/}
+    <Resume />
     <Footer />
   </Layout>
 );
