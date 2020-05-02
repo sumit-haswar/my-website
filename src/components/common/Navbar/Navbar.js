@@ -25,14 +25,14 @@ const NAV_ITEMS = [
     text:'resume',
     link:'/resume/'
   },
-  // {
-  //   text:'work',
-  //   link:'/work/'
-  // },
-  // {
-  //   text:'bookshelf',
-  //   link:'/bookshelf/'
-  // }
+  {
+    text:'projects',
+    link:'/projects/'
+  },
+  {
+    text:'bookshelf',
+    link:'/bookshelf/'
+  }
 ];
 
 class Navbar extends Component {
