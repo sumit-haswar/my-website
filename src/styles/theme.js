@@ -1,7 +1,7 @@
 const theme = {
   font: {
-    primary: `'Calibri', serif`,
-    secondary: `'Calibri', serif`,
+    primary: `'Prata', serif`,
+    secondary: `'Helvetica', serif`,
   },
   font_size: {
     xsmall: 'font-size: 18px; line-height: 30px',
