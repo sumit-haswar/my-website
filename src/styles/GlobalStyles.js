@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: ${props => props.theme.font.secondary};
   }
 
-  h1, h2, h3, p {
+  h1, h2, p {
     margin: 0;
     font-weight: normal;
   }
@@ -29,7 +29,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h3 {
-    ${props => props.theme.font_size.regular};
+    ${props => props.theme.font_size.regular};    
+    margin-bottom: 0;
   }
 
   p {

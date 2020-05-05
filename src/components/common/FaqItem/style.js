@@ -19,11 +19,11 @@ export const Wrapper = styled.div`
     cursor: pointer;
 
     font-family: ${props => props.theme.font.secondary};
-    ${props => props.theme.font_size.regular};
-    font-weight: bold;
-    padding: 24px;
+    ${props => props.theme.font_size.xsmall};
+    font-weight: normal;
+    padding: 15px;
     padding-right: 72px;
-    padding-left: 16px;
+    padding-left: 5px;
     position: relative;
 
     &::after {
