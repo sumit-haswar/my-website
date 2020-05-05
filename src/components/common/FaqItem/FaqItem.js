@@ -14,8 +14,7 @@ const FaqItem = ({ title, children }) => (
       contentInnerClassName="faq-content"
       trigger={title}
       transitionTime={300}
-      easing="ease-out"
-    >
+      easing="ease-out">
       {children}
     </Collapsible>
   </Wrapper>

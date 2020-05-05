@@ -76,7 +76,7 @@ const Resume = () => (
           <Grid oneColumn>
             <div>
               <p>California State University, Long Beach (2015) </p>
-              MS, Full-Time Program in Computer Science | GPA: 3.5
+              MS, Full-Time Program in Computer Science
               <p>University of Mumbai, BE in Computer Science (2007)</p>
             </div>
           </Grid>
@@ -165,7 +165,7 @@ const Grid = styled.div`
 `;
 
 const Art = styled.figure`
-  margin: 0;
+  // margin: 0;
   max-width: 380px;
   width: 100%;
 `;
