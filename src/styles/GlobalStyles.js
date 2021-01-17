@@ -67,6 +67,8 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     cursor: pointer;
+    color: #8bd8ed;
+    text-decoration: none;
   }
 `;
 
