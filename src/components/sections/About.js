@@ -56,20 +56,17 @@ const About = () => (
             {/*</Art>*/}
             <div>
               <p>
-                I am originally from the city of Mumbai in India. I moved to US in 2013 for pursuing MS in Computer Science
+                I am originally from the city of Mumbai. I moved to US in 2013 for pursuing MS in Computer Science
                 at California State University Long Beach (Go Beach!), and for me California was love at first sight.
               </p>
               <p>
                 Before moving to US, I spent couple of years in Vienna working for <a rel="noreferrer noopener"
-                                                                                      style={{ color: '#8bd8ed', textDecoration: 'inherit'}}
                                                                                       href={'https://www.iaea.org/'} target={'_blank'}>IAEA</a> as a Software Engineer,
-                and before that I was developing financial and logistics software in my hometown of Mumbai. I've been working full-time for more than 10
-                years and I think the best aspect of developing software is doing it as a team. I have been the best programmer
-                in some teams and in some I've been the worst. Both experiences together taught me so much which by itself would have taught me very little.
+                and before that I was developing financial and logistics software in my hometown of Mumbai.
               </p>
               <br/>
               <p>
-                I am an avid soccer fan and a <a rel="noreferrer noopener" style={{ color: '#8bd8ed', textDecoration: 'inherit'}}
+                I am an avid soccer fan and a <a rel="noreferrer noopener"
                                                  href={'https://www.acmilan.com/en'} target={'_blank'}>Rossoneri</a> supporter.
                 In my free time I play pick-up soccer, cycle around SF, play Dark Souls and listen to classic rock.
               </p>

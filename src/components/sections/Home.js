@@ -53,9 +53,9 @@ const Home = () => (
             <div>
               <p>
                 Hi ! <br/>
-                I live in San Francisco and work for <a rel="noreferrer noopener" style={{ color: '#8bd8ed', textDecoration: 'inherit'}} href={'https://www.minted.com'} target={'_blank'}>Minted</a> as a Software Engineer.
+                I live in San Francisco and work for <a rel="noreferrer noopener" href={'https://www.minted.com'} target={'_blank'}>Minted</a> as a Software Engineer.
                 <br/>
-                I grew up in India and studied Computer Science at <a rel="noreferrer noopener" style={{ color: '#8bd8ed', textDecoration: 'inherit'}} href={'https://www.csulb.edu/'} target={'_blank'}>Cal. State Long Beach</a> and <a rel="noreferrer noopener" style={{ color: '#8bd8ed', textDecoration: 'inherit'}} href={'http://mu.ac.in/'} target={'_blank'}>Mumbai University</a>.
+                I grew up in India and studied Computer Science at <a rel="noreferrer noopener" href={'https://www.csulb.edu/'} target={'_blank'}>Cal. State Long Beach</a> and <a rel="noreferrer noopener" href={'http://mu.ac.in/'} target={'_blank'}>Mumbai University</a>.
               </p>
             </div>
           </Grid>
