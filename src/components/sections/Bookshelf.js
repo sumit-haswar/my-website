@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Section, Container } from '@components/global';
+import { Section, Container, Title } from '@components/global';
 
 import FaqItem from '@common/FaqItem';
 import ExternalLink from '@common/ExternalLink';
@@ -126,8 +126,11 @@ const BOOKS = [
 
 const Bookshelf = () => (
   <Section id="faq">
+    <Title>
+      <h2 style={{ marginBottom: 10 }}>My bookshelf</h2>
+    </Title>
     <Container>
-      <h3 style={{ marginBottom: 10 }}>My bookshelf</h3>
+      {/*<h3 style={{ marginBottom: 10 }}>My bookshelf</h3>*/}
       <div>
         {BOOKS.map(({ title, content }) => (
           <FaqItem title={title} key={title}>
