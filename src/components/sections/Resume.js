@@ -50,9 +50,10 @@ const Resume = () => (
     render={data => (
       <Section id="about">
         <Title>
-            <h2>Resume</h2>
+            <h2 style={{ marginBottom: 10 }}>Resume</h2>
         </Title>
         <Container>
+
           <h3>Technical Skills</h3>
           <Grid inverse>
             <div>

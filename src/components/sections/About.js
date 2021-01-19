@@ -46,7 +46,7 @@ const About = () => (
     render={data => (
       <Section id="about">
         <Title>
-          <h2>About me</h2>
+          <h2 style={{ marginBottom: 10 }}>About me</h2>
         </Title>
         <Container>
           <Grid inverse>
@@ -56,19 +56,19 @@ const About = () => (
             {/*</Art>*/}
             <div>
               <p>
-                I am originally from the city of Mumbai. I moved to US in 2013 for pursuing MS in Computer Science
-                at California State University Long Beach (Go Beach!), and for me California was love at first sight.
+                I am originally from the so called <a target={'_blank'} href={'https://en.wikipedia.org/wiki/Maya_(given_name)'}>maya</a>-nagri(magic-city) Mumbai.
+                After completing college I worked for around 3-4 years in my hometown. I moved to US in 2013 to pursue MS in Computer Science
+                at the California State University Long Beach. For me California was love at first sight.
               </p>
               <p>
                 Before moving to US, I spent couple of years in Vienna working for <a rel="noreferrer noopener"
-                                                                                      href={'https://www.iaea.org/'} target={'_blank'}>IAEA</a> as a Software Engineer,
-                and before that I was developing financial and logistics software in my hometown of Mumbai.
+                                                                                      href={'https://www.iaea.org/'} target={'_blank'}>IAEA</a> as a Software Engineer.
               </p>
               <br/>
               <p>
-                I am an avid soccer fan and a <a rel="noreferrer noopener"
-                                                 href={'https://www.acmilan.com/en'} target={'_blank'}>Rossoneri</a> supporter.
-                In my free time I play pick-up soccer, cycle around SF, play Dark Souls and listen to classic rock.
+                I am an avid soccer fan and a <a rel="noreferrer noopener" href={'https://www.acmilan.com/en'} target={'_blank'}>Rossoneri</a> supporter.
+                I spend most of my money either on Onitsuka sneakers or on <a target={'_blank'} href={'https://www.designbyhumans.com/'}>designbyhumans t-shirts</a>,
+                you'll mostly find me in either or both. In my free time I play soccer, cycle around SF, play Dark Souls and listen to classic rock.
               </p>
             </div>
           </Grid>
