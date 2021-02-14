@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
-import { Section, Container } from '@components/global';
+import { Section, Container, Title } from '@components/global';
 
 const Home = () => (
   <StaticQuery
@@ -45,66 +44,25 @@ const Home = () => (
     `}
     render={data => (
       <Section id="home">
+        <Title>
+          <h2 style={{ marginBottom: 10 }}>Projects</h2>
+        </Title>
         <Container>
-          <Grid>
-            {/*<Art>*/}
-            {/*  <Img fluid={data.art_learn.childImageSharp.fluid} />*/}
-            {/*</Art>*/}
-            coming soon
-            {/*<div>*/}
-            {/*  <p>*/}
-            {/*  </p>*/}
-            {/*</div>*/}
-          </Grid>
+          <h3>stock-infer</h3>
+          <p>- coming soon</p>
+
+          <h3>py prep</h3>
+          <p>my python implementation for some of the most popular and some not so popular programming interview
+          questions.</p>
+
+          <h3>xPlora</h3>
+          <p>disk based search engine with dynamic ranking algorithm, relevant ranked retrieval and google news web crawler.
+          </p>
         </Container>
       </Section>
     )}
   />
 );
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-gap: 30px;
-  text-align: right;
-  align-items: center;
-  justify-items: center;
-  margin: 24px 0;
-
-  ${props =>
-  props.inverse &&
-  `
-    text-align: left;
-    grid-template-columns: 3fr 1fr;
-  `}
-
-  h2 {
-    margin-bottom: 16px;
-  }
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    grid-template-columns: 1fr;
-    text-align: left;
-    margin-bottom: 96px;
-
-    &:last-child {
-      margin-bottom: 24px;
-    }
-
-    ${props =>
-  props.inverse &&
-  `
-        ${Art} {
-          order: 2;
-        }
-    `}
-  }
-`;
-
-const Art = styled.figure`
-  margin: 0;
-  max-width: 380px;
-  width: 100%;
-`;
 
 export default Home;

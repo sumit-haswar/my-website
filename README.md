@@ -7,7 +7,7 @@ gatsby develop
 ### View your site locally
 http://localhost:8000/
 
-### Create a production build
+### How to create a production build
 
 #### Stop the development server (if it’s still running) and run the 
 following command:

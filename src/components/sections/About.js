@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
 import { Section, Container, Title, Link } from '@components/global';
 
@@ -49,11 +48,7 @@ const About = () => (
           <h2 style={{ marginBottom: 10 }}>About me</h2>
         </Title>
         <Container>
-          <Grid inverse>
-            {/*add pic here*/}
-            {/*<Art>*/}
-            {/*  <Img fluid={data.art_learn.childImageSharp.fluid} />*/}
-            {/*</Art>*/}
+          {/*<Grid inverse>*/}
             <div>
               <p>
                 I am originally from the so called <a target={'_blank'} href={'https://en.wikipedia.org/wiki/Maya_(given_name)'}>maya</a>-nagri(magic-city) Mumbai.
@@ -61,17 +56,17 @@ const About = () => (
                 at the California State University Long Beach. For me California was love at first sight.
               </p>
               <p>
-                Before moving to US, I spent couple of years in Vienna working for <a rel="noreferrer noopener"
-                                                                                      href={'https://www.iaea.org/'} target={'_blank'}>IAEA</a> as a Software Engineer.
+                Before moving to US, I spent couple of years in Vienna working for <a rel="noreferrer noopener" href={'https://www.iaea.org/'} target={'_blank'}>IAEA </a>
+                as a Software Engineer.
               </p>
               <br/>
               <p>
                 I am an avid soccer fan and a <a rel="noreferrer noopener" href={'https://www.acmilan.com/en'} target={'_blank'}>Rossoneri</a> supporter.
-                I spend most of my money either on Onitsuka sneakers or on <a target={'_blank'} href={'https://www.designbyhumans.com/'}>designbyhumans t-shirts</a>,
-                you'll mostly find me in either or both. In my free time I play soccer, cycle around SF, play Dark Souls and listen to classic rock.
+                I spend most of my money either on Onitsuka Tiger sneakers or on <a target={'_blank'} href={'https://www.designbyhumans.com/'}>designbyhumans</a> t-shirts,
+                you'll mostly find me in either or both. In my free time I play soccer, bike around SF and listen to classic rock.
               </p>
             </div>
-          </Grid>
+          {/*</Grid>*/}
         </Container>
       </Section>
     )}
