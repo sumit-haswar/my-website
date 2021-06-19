@@ -53,7 +53,7 @@ const About = () => (
               <p>
                 I am originally from the so called <a target={'_blank'} href={'https://en.wikipedia.org/wiki/Maya_(given_name)'}>maya</a>-nagri(magic-city) Mumbai.
                 After completing college I worked for around 3-4 years in my hometown. I moved to US in 2013 to pursue MS in Computer Science
-                at the California State University Long Beach. For me California was love at first sight.
+                at the California State University Long Beach and for me California was love at first sight.
               </p>
               <p>
                 Before moving to US, I spent couple of years in Vienna working for <a rel="noreferrer noopener" href={'https://www.iaea.org/'} target={'_blank'}>IAEA </a>
@@ -63,7 +63,7 @@ const About = () => (
               <p>
                 I am an avid soccer fan and a <a rel="noreferrer noopener" href={'https://www.acmilan.com/en'} target={'_blank'}>Rossoneri</a> supporter.
                 I spend most of my money either on Onitsuka Tiger sneakers or on <a target={'_blank'} href={'https://www.designbyhumans.com/'}>designbyhumans</a> t-shirts,
-                you'll mostly find me in either or both. In my free time I play soccer, bike around SF and listen to classic rock.
+                you'll mostly find me in either or both. In my free time I love playing soccer, biking around SF and listening to classic rock.
               </p>
             </div>
           {/*</Grid>*/}
