@@ -48,7 +48,7 @@ const Home = () => (
           <h2 style={{ marginBottom: 10 }}>Projects</h2>
         </Title>
         <Container>
-          <h3>stock-infer</h3>
+          <h3>stocks-infer</h3>
           <p>- coming soon</p>
 
           <h3>py prep</h3>

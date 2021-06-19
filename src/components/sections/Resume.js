@@ -56,9 +56,10 @@ const Resume = () => (
         </Title>
         <Container>
           <p>
-          I develop software at <del><a rel="noreferrer noopener" href={'https://intermolecular.com'} target={'_blank'}>Intermolecular</a></del>&nbsp;
-             <del><a rel="noreferrer noopener" href={'https://www.practicefusion.com'} target={'_blank'}>Practice Fusion</a></del>&nbsp;
-             <a rel="noreferrer noopener" href={'https://www.minted.com'} target={'_blank'}>Minted</a> on distributed services,
+          I develop software at&nbsp;
+             <del><a rel="noreferrer noopener" href={'https://www.practicefusion.com'} target={'_blank'}>Practice-Fusion</a></del>&nbsp;
+             <del><a rel="noreferrer noopener" href={'https://www.minted.com'} target={'_blank'}>Minted</a></del>&nbsp;
+             <a rel="noreferrer noopener" href={'https://www.zillowgroup.com/'} target={'_blank'}>Zillow Group</a> on distributed services,
           web apis, functional programming and data retrieval systems.
           </p>
           <h3>Technical Skills</h3>
