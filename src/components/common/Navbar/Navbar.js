@@ -57,7 +57,7 @@ class Navbar extends Component {
   // );
 
   getNavAnchorLink = item => (
-    <Link to={`${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
+    <Link to={`/${item.toLowerCase()}/`} onClick={this.closeMobileMenu}>
       {item}
     </Link>
     // <AnchorLink href={`${item.toLowerCase()}`} on  Click={this.closeMobileMenu}>
@@ -89,7 +89,7 @@ class Navbar extends Component {
           <Brand> <a style={{ color: '#564F62', textDecoration: 'inherit'}} href="/">Sumit Haswar</a></Brand>
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>
-              <MenuIcon />
+              {/*<MenuIcon />*/}
             </button>
           </Mobile>
 
