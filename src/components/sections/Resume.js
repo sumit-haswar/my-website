@@ -84,14 +84,12 @@ const Resume = () => (
             >
               Zillow Group
             </a>{' '}
-            and work on designing
-            and developing distributed services, web APIs, functional
-            programming and data retrieval systems. I have a strong background
-            in implementing data intensive applications, robust APIs and highly
-            distributed services using technologies including but not limited to
-            AWS, Kafka, Flink, SQL and DynamoDB.
-            Most of what I do at Zillow is related to
-            providing
+            where I focus on designing and developing distributed services, web APIs,
+            functional programming and data retrieval systems. I have a solid
+            background in creating data-intensive applications, scalable APIs
+            and highly distributed services using technologies like AWS, FastAPI, Kafka, Flink, SQL and DynamoDB.
+            At Zillow, most of
+            my work centers around creating{' '}
             <a
               rel="noreferrer noopener"
               href={
@@ -100,10 +98,10 @@ const Resume = () => (
               target={'_blank'}
             >
               {' '}
-              new, immersive and interactive home tour experiences{' '}
-            </a>
-            to our users making their home shopping journey faster and more
-            accurate.
+              immersive and interactive home tour experiences{' '}
+            </a>{' '}
+            to help make the home shopping journey faster, smarter, and more
+            engaging for users.
           </p>
           <h3>Technical Skills</h3>
           <Table>
