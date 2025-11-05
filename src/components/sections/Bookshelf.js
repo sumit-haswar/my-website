@@ -94,7 +94,8 @@ const BOOKS = [
     title: 'The Big Short',
     content: () => (
       <>
-        ...
+        The Big Short: Inside the Doomsday Machine is a nonfiction book by Michael Lewis about the build-up of
+        the United States housing bubble during the 2000s.
       </>
     ),
   },
@@ -130,7 +131,6 @@ const Bookshelf = () => (
       <h2 style={{ marginBottom: 10 }}>My bookshelf</h2>
     </Title>
     <Container>
-      {/*<h3 style={{ marginBottom: 10 }}>My bookshelf</h3>*/}
       <div>
         {BOOKS.map(({ title, content }) => (
           <FaqItem title={title} key={title}>

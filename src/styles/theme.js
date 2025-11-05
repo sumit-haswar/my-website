@@ -4,6 +4,7 @@ const theme = {
     secondary: `'Helvetica', serif`,
   },
   font_size: {
+    xxsmall: 'font-size: 16px; line-height: 30px',
     xsmall: 'font-size: 18px; line-height: 30px',
     small: 'font-size: 20px; line-height: 30px',
     regular: 'font-size: 24px; line-height: 32px',
