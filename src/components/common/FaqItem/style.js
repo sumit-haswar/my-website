@@ -48,9 +48,10 @@ export const Wrapper = styled.div`
   }
 
   .faq-content {
-    padding: 0 72px 32px 16px;
-    line-height: 26px;
-    ${props => props.theme.font_size.small};
-    color: ${props => props.theme.color.black.light};
+      ${props => props.theme.font_size.xxsmall};
+      padding: 0 72px 32px 16px;
+      line-height: 26px;
+      // ${props => props.theme.font_size.small};
+      color: ${props => props.theme.color.black.light};
   }
 `;
