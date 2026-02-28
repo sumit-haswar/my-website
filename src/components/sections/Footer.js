@@ -109,13 +109,6 @@ const Copyright = styled.div`
   }
 `;
 
-const Art = styled.figure`
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  margin-top: 48px;
-`;
-
 const StyledContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
