@@ -4,8 +4,6 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import { Section, Container, Title } from '@components/global';
 
-import constraintModelingPdf from '@static/files/Constraint-Modeling-Xml.pdf';
-
 // Technical Skills
 // Education
 // Work Experience
