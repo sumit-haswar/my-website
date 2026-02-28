@@ -36,7 +36,7 @@ const GlobalStyles = createGlobalStyle`
   p {
     ${props => props.theme.font_size.xsmall};
     color: ${props => props.theme.color.black.light};
-    font-family: 
+    font-family: ${props => props.theme.font.secondary};
   }
 
   @media (max-width: ${props => props.theme.screen.sm}) {

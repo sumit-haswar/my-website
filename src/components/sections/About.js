@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 
-import { Section, Container, Title, Link } from '@components/global';
+import { Section, Container, Title } from '@components/global';
 
 const About = () => (
   <StaticQuery
