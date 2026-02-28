@@ -54,6 +54,7 @@ const About = () => (
               I'm originally from Mumbai, affectionately known as{' '}
               <a
                 target={'_blank'}
+                rel="noreferrer noopener"
                 href={'https://en.wikipedia.org/wiki/Maya_(given_name)'}
               >
                 Maya
@@ -85,7 +86,13 @@ const About = () => (
               AC Milan
             </a>{' '} supporter. Most
               of my wardrobe is a mix of Onitsuka Tiger sneakers and {' '}
-              <a target={'_blank'} href={'https://www.designbyhumans.com/'}>DesignByHumans</a>
+              <a
+                target={'_blank'}
+                rel="noreferrer noopener"
+                href={'https://www.designbyhumans.com/'}
+              >
+                DesignByHumans
+              </a>
               {' '}t-shirts—you'll rarely catch
                 me in anything else.
                 In my free time, I enjoy playing soccer, biking around San
@@ -98,50 +105,5 @@ const About = () => (
     )}
   />
 );
-
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  grid-gap: 30px;
-  text-align: right;
-  align-items: center;
-  justify-items: center;
-  margin: 24px 0;
-
-  ${props =>
-    props.inverse &&
-    `
-    text-align: left;
-    grid-template-columns: 3fr 1fr;
-  `}
-
-  h2 {
-    margin-bottom: 16px;
-  }
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    grid-template-columns: 1fr;
-    text-align: left;
-    margin-bottom: 96px;
-
-    &:last-child {
-      margin-bottom: 24px;
-    }
-
-    ${props =>
-      props.inverse &&
-      `
-        ${Art} {
-          order: 2;
-        }
-    `}
-  }
-`;
-
-const Art = styled.figure`
-  margin: 0;
-  max-width: 380px;
-  width: 100%;
-`;
 
 export default About;

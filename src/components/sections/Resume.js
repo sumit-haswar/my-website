@@ -145,7 +145,11 @@ const Resume = () => (
                   </td>
                   <td>Computer Science</td>
                   <td>
-                    <a target={'_blank'} href={'https://www.csulb.edu/'}>
+                    <a
+                      target={'_blank'}
+                      rel="noreferrer noopener"
+                      href={'https://www.csulb.edu/'}
+                    >
                       California State University, Long Beach
                     </a>
                   </td>
@@ -159,7 +163,11 @@ const Resume = () => (
                   </td>
                   <td>Computer Engineering</td>
                   <td>
-                    <a target={'_blank'} href={'https://mu.ac.in/'}>
+                    <a
+                      target={'_blank'}
+                      rel="noreferrer noopener"
+                      href={'https://mu.ac.in/'}
+                    >
                       University of Mumbai
                     </a>
                   </td>
