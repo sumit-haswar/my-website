@@ -58,16 +58,6 @@ const Resume = () => (
             <del>
               <a
                 rel="noreferrer noopener"
-                href={'https://www.practicefusion.com'}
-                target={'_blank'}
-              >
-                Practice-Fusion
-              </a>
-            </del>
-            &nbsp;
-            <del>
-              <a
-                rel="noreferrer noopener"
                 href={'https://www.minted.com'}
                 target={'_blank'}
               >
@@ -75,31 +65,29 @@ const Resume = () => (
               </a>
             </del>
             &nbsp;
+            <del>
+              <a
+                rel="noreferrer noopener"
+                href={'https://www.zillowgroup.com/'}
+                target={'_blank'}
+              >
+                Zillow Group
+              </a>
+            </del>{' '}
             <a
               rel="noreferrer noopener"
-              href={'https://www.zillowgroup.com/'}
+              href={'https://engineering.fb.com/'}
               target={'_blank'}
             >
-              Zillow Group
+              Meta
             </a>{' '}
-            where I focus on designing and developing distributed services, web APIs,
-            functional programming and data retrieval systems. I have a solid
-            background in creating data-intensive applications, scalable APIs
-            and highly distributed services using technologies like AWS, FastAPI, Kafka, Flink, SQL and DynamoDB.
-            At Zillow, most of
-            my work centers around creating{' '}
-            <a
-              rel="noreferrer noopener"
-              href={
-                'https://www.zillowgroup.com/news/how-scientists-at-zillow-are-making-your-home-shopping-journey-faster-and-more-accurate/'
-              }
-              target={'_blank'}
-            >
-              {' '}
-              immersive and interactive home tour experiences{' '}
-            </a>{' '}
-            to help make the home shopping journey faster, smarter, and more
-            engaging for users.
+            where I focus on designing and developing distributed services, web
+            APIs, functional programming and data retrieval systems. I have a
+            solid background in creating data-intensive applications, scalable
+            APIs and highly distributed services using technologies like AWS,
+            FastAPI, Kafka, Flink, SQL and DynamoDB. At Meta, I work on
+            Federated Platforms for privacy, safeguards, and risk infrastructure
+            to enable safe and responsible user experiences at scale.
           </p>
           <h3>Technical Skills</h3>
           <Table>
