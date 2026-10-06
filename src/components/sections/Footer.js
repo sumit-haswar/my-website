@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
 
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
@@ -8,115 +7,103 @@ import ExternalLink from '@common/ExternalLink';
 import GithubIcon from '@static/icons/github.svg';
 import InstagramIcon from '@static/icons/instagram.svg';
 import TwitterIcon from '@static/icons/twitter.svg';
-import LinkedInIcon from '@static/icons/linkedin.svg'
+import LinkedInIcon from '@static/icons/linkedin.svg';
 
 const SOCIAL = [
   {
+    name: 'LinkedIn',
     icon: LinkedInIcon,
     link: 'https://www.linkedin.com/in/sumit-haswar-77744715/',
   },
+  { name: 'GitHub', icon: GithubIcon, link: 'https://github.com/sumit-haswar' },
   {
-    icon: GithubIcon,
-    link: 'https://github.com/sumit-haswar',
-  },
-  {
+    name: 'Instagram',
     icon: InstagramIcon,
     link: 'https://www.instagram.com/sumit_haswar',
   },
-  {
-    icon: TwitterIcon,
-    link: 'https://twitter.com/blue_floyd_',
-  },
+  { name: 'X', icon: TwitterIcon, link: 'https://twitter.com/blue_floyd_' },
 ];
 
 const Footer = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        art_pot: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "customers_pot" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 960) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <React.Fragment>
-        {/*<Art>*/}
-        {/*  <Img*/}
-        {/*    fluid={data.art_pot.childImageSharp.fluid}*/}
-        {/*    style={{ width: 480, maxWidth: '100%', marginBottom: -16 }}*/}
-        {/*  />*/}
-        {/*</Art>*/}
-        <FooterWrapper>
-          <StyledContainer>
-            <Copyright>
-              {/*<h2>Absurd</h2>*/}
-              {/*<span>*/}
-              {/*  Illustrations by*/}
-              {/*  {` `}*/}
-              {/*  <ExternalLink href="https://twitter.com/diana_valeanu">*/}
-              {/*    @diana_valeanu*/}
-              {/*  </ExternalLink>*/}
-              {/*</span>*/}
-            </Copyright>
-            <SocialIcons>
-              {SOCIAL.map(({ icon, link }) => (
-                <ExternalLink key={link} href={link}>
-                  <img src={icon} alt="link" />
-                </ExternalLink>
-              ))}
-            </SocialIcons>
-          </StyledContainer>
-        </FooterWrapper>
-      </React.Fragment>
-    )}
-  />
+  <FooterWrapper>
+    <Container>
+      <FooterTop>
+        <Kicker>Let’s connect</Kicker>
+        <SocialIcons>
+          {SOCIAL.map(({ name, icon, link }) => (
+            <ExternalLink key={name} href={link} aria-label={name}>
+              <img src={icon} alt="" />
+            </ExternalLink>
+          ))}
+        </SocialIcons>
+      </FooterTop>
+      <FooterBottom>
+        <span>© {new Date().getFullYear()} Sumit Haswar</span>
+        <span>Built with care in San Francisco.</span>
+      </FooterBottom>
+    </Container>
+  </FooterWrapper>
 );
 
-const SocialIcons = styled.div`
-  display: flex;
-
-  img {
-    margin: 0 8px;
-    width: 24px;
-    height: 24px;
-  }
-
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    margin-top: 40px;
-  }
-`;
-
 const FooterWrapper = styled.footer`
-  background-color: ${props => props.theme.color.primary};
-  padding: 20px 0;
+  padding: 76px 0 28px;
+  background: ${p => p.theme.color.primary};
 `;
 
-const Copyright = styled.div`
-  font-family: ${props => props.theme.font.secondary};
-  ${props => props.theme.font_size.small};
-  color: ${props => props.theme.color.black.regular};
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-`;
-
-const StyledContainer = styled(Container)`
+const FooterTop = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @media (max-width: ${props => props.theme.screen.sm}) {
+  gap: 48px;
+  padding-bottom: 40px;
+  @media (max-width: ${p => p.theme.screen.sm}) {
+    align-items: flex-start;
     flex-direction: column;
-    text-align: center;
+  }
+`;
+
+const Kicker = styled.p`
+  margin: 0;
+  color: ${p => p.theme.color.accent};
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+`;
+
+const SocialIcons = styled.div`
+  display: flex;
+  gap: 10px;
+  a {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(22, 35, 29, 0.18);
+    border-radius: 50%;
+    transition: transform 160ms ease, background 160ms ease;
+  }
+  a:hover {
+    transform: translateY(-3px);
+    background: ${p => p.theme.color.surface};
+  }
+  img {
+    width: 18px;
+    height: 18px;
+  }
+`;
+
+const FooterBottom = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(22, 35, 29, 0.16);
+  color: ${p => p.theme.color.black.light};
+  font-size: 12px;
+  @media (max-width: ${p => p.theme.screen.xs}) {
+    flex-direction: column;
   }
 `;
 
