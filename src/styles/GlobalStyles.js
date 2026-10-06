@@ -9,23 +9,29 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: ${props => props.theme.font.secondary};
+    color: ${props => props.theme.color.black.regular};
+    background: ${props => props.theme.color.surface};
+    -webkit-font-smoothing: antialiased;
   }
 
-  h1, h2, p {
+  h1, h2, h3, h4, p {
     margin: 0;
     font-weight: normal;
   }
 
   h1, h2, h3 {
     font-family: ${props => props.theme.font.primary};
+    font-weight: 700;
   }
 
   h1 {
     ${props => props.theme.font_size.xlarge};
+    letter-spacing: -0.05em;
   }
 
   h2 {
     ${props => props.theme.font_size.larger};
+    letter-spacing: -0.04em;
   }
 
   h3 {
@@ -37,6 +43,16 @@ const GlobalStyles = createGlobalStyle`
     ${props => props.theme.font_size.xsmall};
     color: ${props => props.theme.color.black.light};
     font-family: ${props => props.theme.font.secondary};
+  }
+
+  ::selection {
+    color: ${props => props.theme.color.black.regular};
+    background: ${props => props.theme.color.accentLight};
+  }
+
+  :focus-visible {
+    outline: 3px solid ${props => props.theme.color.accent};
+    outline-offset: 4px;
   }
 
   @media (max-width: ${props => props.theme.screen.sm}) {
@@ -67,8 +83,9 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     cursor: pointer;
-    color: #8bd8ed;
-    text-decoration: none;
+    color: ${props => props.theme.color.accent};
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
   }
 `;
 

@@ -11,13 +11,6 @@ module.exports = {
         path: `${__dirname}/src/images/team`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `art`,
-        path: `${__dirname}/src/images/art`,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -26,16 +19,10 @@ module.exports = {
         name: `Sumit Haswar`,
         short_name: `sumit`,
         start_url: `/`,
-        background_color: `#8bd8ed`,
-        theme_color: `#8bd8ed`,
+        background_color: `#F4F4EF`,
+        theme_color: `#161614`,
         display: `minimal-ui`,
         icon: `static/favicon.png`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`average`, `prata\:400,700`],
       },
     },
     {

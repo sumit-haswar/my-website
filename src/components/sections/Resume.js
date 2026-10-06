@@ -1,187 +1,294 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
 
-import { Section, Container, Title } from '@components/global';
+import { Section, Container } from '@components/global';
 
-// Technical Skills
-// Education
-// Work Experience
-// Research Projects
+const SKILLS = [
+  ['Languages', 'Python, Go, Java'],
+  ['Services & APIs', 'GraphQL, REST, FastAPI, Kong, AWS Lambda'],
+  ['Data & infrastructure', 'Kafka, Flink, Docker, Kubernetes, Terraform'],
+  ['Storage', 'DynamoDB, SQL Server, Redis, S3, SQS'],
+];
 
 const Resume = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        art_fast: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "fast" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 860) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
+  <Section>
+    <Container>
+      <PageIntro>
+        <Eyebrow>Experience</Eyebrow>
+        <h1>Building intelligent systems that work at scale.</h1>
+      </PageIntro>
 
-        art_learn: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "learn_yourself" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 860) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
+      <ResumeGrid>
+        <Sidebar>
+          <h3>Focus</h3>
+          <p>Distributed services</p>
+          <p>Applied AI</p>
+          <p>Data-intensive systems</p>
+          <p>Developer platforms</p>
+        </Sidebar>
 
-        art_ideas: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "ideas" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 860) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <Section id="about">
-        <Title>
-          <h2 style={{ marginBottom: 10 }}>Resume</h2>
-        </Title>
-        <Container>
-          <p>
-            I develop Software at&nbsp;
-            <del>
+        <Content>
+          <Block>
+            <SectionLabel>Now</SectionLabel>
+            <Role>
+              <RoleHeader>
+                <div>
+                  <h2>Software Engineer</h2>
+                  <a
+                    href="https://www.meta.com/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    Meta ↗
+                  </a>
+                </div>
+                <span>San Francisco</span>
+              </RoleHeader>
+              <p>
+                I currently work in Applied AI, building intelligent systems and
+                product experiences at{' '}
+                <a
+                  href="https://www.meta.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Meta
+                </a>
+                . My broader background spans distributed services,
+                data-intensive applications, and developer platforms.
+              </p>
+            </Role>
+          </Block>
+
+          <Block>
+            <SectionLabel>Previously</SectionLabel>
+            <PreviousRoles>
               <a
+                href="https://www.zillowgroup.com/"
+                target="_blank"
                 rel="noreferrer noopener"
-                href={'https://www.minted.com'}
-                target={'_blank'}
               >
-                Minted
+                Zillow Group <span>↗</span>
               </a>
-            </del>
-            &nbsp;
-            <del>
               <a
+                href="https://www.minted.com/"
+                target="_blank"
                 rel="noreferrer noopener"
-                href={'https://www.zillowgroup.com/'}
-                target={'_blank'}
               >
-                Zillow Group
+                Minted <span>↗</span>
               </a>
-            </del>{' '}
-            <a
-              rel="noreferrer noopener"
-              href={'https://engineering.fb.com/'}
-              target={'_blank'}
-            >
-              Meta
-            </a>{' '}
-            where I focus on designing and developing distributed services, web
-            APIs, functional programming and data retrieval systems. I have a
-            solid background in creating data-intensive applications, scalable
-            APIs and highly distributed services using technologies like AWS,
-            FastAPI, Kafka, Flink, SQL and DynamoDB. At Meta, I work on
-            Federated Platforms for privacy, safeguards, and risk infrastructure
-            to enable safe and responsible user experiences at scale.
-          </p>
-          <h3>Technical Skills</h3>
-          <Table>
-            <table cellPadding="4" cellSpacing="4">
-              <tbody>
-                <tr>
-                  <td>
-                    <h4>Programming Languages</h4>
-                  </td>
-                  <td>Python, Go, Java</td>
-                </tr>
-                <tr>
-                  <td>
-                    <h4>Web Technologies</h4>
-                  </td>
-                  <td>GraphQL, REST, AWS Lambda, FastAPI, Kong</td>
-                </tr>
-                <tr>
-                  <td>
-                    <h4>Other Technologies</h4>
-                  </td>
-                  <td>
-                    Apache Flink, Git, Docker, Kubernetes, Terraform, Kafka, SNS
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <h4>Databases & Storage</h4>
-                  </td>
-                  <td>MS SQL Server, DynamoDB, SQS, S3, Redis, AWS S3</td>
-                </tr>
-              </tbody>
-            </table>
-          </Table>
+              <a
+                href="https://www.iaea.org/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                IAEA <span>↗</span>
+              </a>
+            </PreviousRoles>
+          </Block>
 
-          <h3>Education</h3>
-          <Table>
-            <table cellPadding="4" cellSpacing="4">
-              <tbody>
-                <tr>
-                  <td>
-                    <h4>MS</h4>
-                  </td>
-                  <td>Computer Science</td>
-                  <td>
-                    <a
-                      target={'_blank'}
-                      rel="noreferrer noopener"
-                      href={'https://www.csulb.edu/'}
-                    >
-                      California State University, Long Beach
-                    </a>
-                  </td>
-                </tr>
-                {/*<tr>*/}
-                {/*  <td colSpan={3}>Research Project: <a rel="noreferrer noopener" href={constraintModelingPdf} target={'_blank'}>Platform Agnostic Constraint Modeling using XML</a></td>*/}
-                {/*</tr>*/}
-                <tr>
-                  <td>
-                    <h4>BE</h4>
-                  </td>
-                  <td>Computer Engineering</td>
-                  <td>
-                    <a
-                      target={'_blank'}
-                      rel="noreferrer noopener"
-                      href={'https://mu.ac.in/'}
-                    >
-                      University of Mumbai
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </Table>
-        </Container>
-      </Section>
-    )}
-  />
+          <Block>
+            <SectionLabel>Technical toolkit</SectionLabel>
+            <SkillList>
+              {SKILLS.map(([label, value]) => (
+                <Skill key={label}>
+                  <strong>{label}</strong>
+                  <span>{value}</span>
+                </Skill>
+              ))}
+            </SkillList>
+          </Block>
+
+          <Block>
+            <SectionLabel>Education</SectionLabel>
+            <Education>
+              <div>
+                <strong>MS, Computer Science</strong>
+                <a
+                  href="https://www.csulb.edu/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  California State University, Long Beach ↗
+                </a>
+              </div>
+              <div>
+                <strong>BE, Computer Engineering</strong>
+                <a
+                  href="https://mu.ac.in/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  University of Mumbai ↗
+                </a>
+              </div>
+            </Education>
+          </Block>
+        </Content>
+      </ResumeGrid>
+    </Container>
+  </Section>
 );
 
-const Table = styled.table`
-  text-align: left;
-  margin: 0 0;
-  color: ${props => props.theme.color.black.light};
-  
-  td h4 {
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 0;
-    display: inline;
-  }
-  
+const Eyebrow = styled.p`
+  margin-bottom: 20px;
+  color: ${p => p.theme.color.accent};
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 `;
 
+const PageIntro = styled.header`
+  max-width: 850px;
+  margin-bottom: 80px;
+  h1 {
+    font-size: clamp(44px, 6vw, 70px);
+    line-height: 1.13;
+  }
+`;
+
+const ResumeGrid = styled.div`
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 96px;
+  @media (max-width: ${p => p.theme.screen.md}) {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+`;
+
+const Sidebar = styled.aside`
+  align-self: start;
+  padding: 24px;
+  border-radius: 14px;
+  background: ${p => p.theme.color.primary};
+  h3 {
+    margin-bottom: 18px;
+    font-size: 16px;
+  }
+  p {
+    margin: 5px 0;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+`;
+
+const Content = styled.div``;
+
+const Block = styled.section`
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  padding: 0 0 56px;
+  margin-bottom: 56px;
+  border-bottom: 1px solid rgba(22, 35, 29, 0.18);
+  @media (max-width: ${p => p.theme.screen.sm}) {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+`;
+
+const SectionLabel = styled.h3`
+  color: ${p => p.theme.color.accent};
+  font-family: ${p => p.theme.font.secondary};
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+`;
+
+const Role = styled.div`
+  > p {
+    margin-top: 22px;
+    line-height: 1.75;
+  }
+`;
+
+const RoleHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  h2 {
+    margin-bottom: 8px;
+    font-size: 30px;
+  }
+  a {
+    font-weight: 700;
+    text-decoration: none;
+  }
+  > span {
+    color: ${p => p.theme.color.black.lighter};
+    font-size: 13px;
+  }
+  @media (max-width: ${p => p.theme.screen.xs}) {
+    flex-direction: column;
+  }
+`;
+
+const PreviousRoles = styled.div`
+  display: grid;
+  a {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(22, 35, 29, 0.12);
+    color: ${p => p.theme.color.black.regular};
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  a:first-child {
+    padding-top: 0;
+  }
+  a:hover {
+    color: ${p => p.theme.color.accent};
+  }
+`;
+
+const SkillList = styled.div`
+  display: grid;
+`;
+
+const Skill = styled.div`
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(22, 35, 29, 0.12);
+  strong {
+    font-size: 14px;
+  }
+  span {
+    color: ${p => p.theme.color.black.light};
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  &:first-child {
+    padding-top: 0;
+  }
+  @media (max-width: ${p => p.theme.screen.xs}) {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+`;
+
+const Education = styled.div`
+  display: grid;
+  gap: 28px;
+  div {
+    display: grid;
+    gap: 7px;
+  }
+  strong {
+    font-size: 17px;
+  }
+  a {
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+`;
 
 export default Resume;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 1200px;
+  max-width: 1040px;
   width: 100%;
   margin: 0 auto;
   padding: 0 16px;
@@ -19,23 +19,22 @@ export const Container = styled.div`
   }
 
   @media (min-width: ${props => props.theme.screen.lg}) {
-    max-width: 1200px;
+    max-width: 1040px;
   }
 
   ${props =>
     props.fluid &&
     `
-    max-width: 1200px !important;
+    max-width: 1040px !important;
   `};
 `;
 
 export const Section = styled.section`
-  padding-top: 90px;
-  padding-bottom: 20px;
+  padding: 128px 0 80px;
   overflow: hidden;
 
   @media (max-width: ${props => props.theme.screen.md}) {
-    padding: 96px 0;
+    padding: 112px 0 72px;
   }
 
   ${props =>
@@ -48,13 +47,14 @@ export const Section = styled.section`
 `;
 
 export const Title = styled.div`
-  margin: 0 auto;
+  max-width: 1040px;
+  margin: 0 auto 48px;
   padding: 0 16px;
-  text-align:center
+  text-align: left;
 
   ${props =>
-  props.fluid &&
-  `
+    props.fluid &&
+    `
     max-width: 1200px !important;
   `};
 `;

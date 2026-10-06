@@ -1,7 +1,7 @@
 const theme = {
   font: {
-    primary: `'Prata', serif`,
-    secondary: `'Helvetica', serif`,
+    primary: `'Helvetica Neue', Helvetica, Arial, sans-serif`,
+    secondary: `'Helvetica Neue', Helvetica, Arial, sans-serif`,
   },
   font_size: {
     xxsmall: 'font-size: 16px; line-height: 30px',
@@ -15,14 +15,18 @@ const theme = {
   color: {
     white: {
       regular: '#FFFFFF',
-      dark: '#F6F6F6',
+      dark: '#EFEFEA',
     },
     black: {
-      lighter: '#ABA8AF',
-      light: '#564F62',
-      regular: '#211E26',
+      lighter: '#8A8A84',
+      light: '#54544F',
+      regular: '#161614',
     },
-    primary: '#8bd8ed',
+    primary: '#DCE9E2',
+    accent: '#E85D32',
+    accentLight: '#FFD9CC',
+    surface: '#F4F4EF',
+    card: '#FCFCF8',
   },
   screen: {
     xs: '575px',

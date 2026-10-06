@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-absurd",
+  "name": "sumit-haswar-portfolio",
   "private": true,
-  "description": "An absurd starter for Gatsby",
+  "description": "The personal portfolio of software engineer Sumit Haswar",
   "version": "0.1.0",
-  "author": "Ajay NS <ajay.ns@outlook.com>",
+  "author": "Sumit Haswar",
   "dependencies": {
     "@svgr/webpack": "^4.1.0",
     "gatsby": "^3.15.0",

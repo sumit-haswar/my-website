@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import Scrollspy from 'react-scrollspy';
-import { Link } from "gatsby"
+import { Link } from 'gatsby';
 
 import { Container } from '@components/global';
 import {
@@ -14,25 +12,26 @@ import {
   Mobile,
 } from './style';
 
-import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
+import MenuIcon from '@static/icons/menu.svg';
 
 const NAV_ITEMS = [
+  { text: 'about', link: '/about/' },
   {
-    text:'about',
-    link:'/'
+    text: 'resume',
+    link: '/resume/',
   },
   {
-    text:'resume',
-    link:'/resume/'
+    text: 'projects',
+    link: '/projects/',
   },
   {
-    text:'projects',
-    link:'/projects/'
+    text: 'bookshelf',
+    link: '/bookshelf/',
   },
   {
-    text:'bookshelf',
-    link:'/bookshelf/'
-  }
+    text: 'gallery',
+    link: '/gallery/',
+  },
 ];
 
 class Navbar extends Component {
@@ -50,33 +49,23 @@ class Navbar extends Component {
     }
   };
 
-  // getNavAnchorLink = item => (
-  //   <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
-  //     {item}
-  //   </AnchorLink>
-  // );
-
   getNavAnchorLink = item => (
-    <Link to={`/${item.toLowerCase()}/`} onClick={this.closeMobileMenu}>
-      {item}
+    <Link
+      to={item.link}
+      activeClassName="active"
+      onClick={this.closeMobileMenu}
+    >
+      {item.text}
     </Link>
-    // <AnchorLink href={`${item.toLowerCase()}`} on  Click={this.closeMobileMenu}>
-    //   {item}
-    // </AnchorLink>
   );
 
   getNavList = ({ mobile = false }) => (
     <NavListWrapper mobile={mobile}>
-      <Scrollspy
-        items={NAV_ITEMS.map(item => item.text.toLowerCase())}
-        currentClassName="active"
-        mobile={mobile}
-        offset={-64}
-      >
+      <ul>
         {NAV_ITEMS.map(navItem => (
-          <NavItem key={navItem}>{this.getNavAnchorLink(navItem.text)}</NavItem>
+          <NavItem key={navItem.text}>{this.getNavAnchorLink(navItem)}</NavItem>
         ))}
-      </Scrollspy>
+      </ul>
     </NavListWrapper>
   );
 
@@ -86,10 +75,22 @@ class Navbar extends Component {
     return (
       <Nav {...this.props}>
         <StyledContainer>
-          <Brand> <a style={{ color: '#564F62', textDecoration: 'inherit'}} href="/">Sumit Haswar</a></Brand>
+          <Brand>
+            <Link to="/" onClick={this.closeMobileMenu}>
+              Sumit Haswar
+            </Link>
+          </Brand>
           <Mobile>
-            <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>
-              {/*<MenuIcon />*/}
+            <button
+              onClick={this.toggleMobileMenu}
+              aria-label={
+                mobileMenuOpen ? 'Close navigation' : 'Open navigation'
+              }
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
+              style={{ color: '#161614', padding: 8 }}
+            >
+              <img src={MenuIcon} alt="" width="24" height="24" />
             </button>
           </Mobile>
 
@@ -97,7 +98,7 @@ class Navbar extends Component {
         </StyledContainer>
         <Mobile>
           {mobileMenuOpen && (
-            <MobileMenu>
+            <MobileMenu id="mobile-navigation">
               <Container>{this.getNavList({ mobile: true })}</Container>
             </MobileMenu>
           )}
