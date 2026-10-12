@@ -32,29 +32,38 @@ const About = () => (
 
         <Story>
           <p className="lead">
-            I’m originally from Mumbai — the city often called{' '}
-            <em>Maya Nagri</em>, or the “City of Magic.” It’s where I studied,
-            began my career, and learned to love the energy of ambitious,
-            complicated places.
+            I’m originally from Mumbai—the city often called <em>Maya Nagri</em>
+            , or the “City of Magic.” It’s where I studied, began my career, and
+            learned to love the energy of ambitious, complicated places.
           </p>
           <p>
-            After a few years working in Mumbai, I moved to Vienna to work as a
-            software engineer at the{' '}
+            After a few years working there, that career took me to Vienna,
+            where I joined the{' '}
             <a
               href="https://www.iaea.org/"
               target="_blank"
               rel="noreferrer noopener"
             >
               International Atomic Energy Agency
-            </a>
-            . In 2013, I moved to the U.S. to pursue an MS in Computer Science
-            at California State University, Long Beach. California quickly felt
-            like home.
+            </a>{' '}
+            as a software engineer. My next chapter began in 2013, when I moved
+            to Long Beach to pursue an MS in Computer Science at California
+            State University. California quickly felt like home, and I’ve stayed
+            ever since.
           </p>
           <p>
-            Today I live in San Francisco. Away from a screen, you’ll usually
-            find me playing soccer, biking around the city, listening to classic
-            rock, or following{' '}
+            I now live in San Francisco and work in applied AI at{' '}
+            <a
+              href="https://www.meta.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Meta
+            </a>
+            —a direction that grew naturally from my background building
+            distributed systems and platforms. Away from a screen, you’ll
+            usually find me playing soccer, biking around the city, listening to
+            classic rock, or following{' '}
             <a
               href="https://www.acmilan.com/en"
               target="_blank"
@@ -62,8 +71,8 @@ const About = () => (
             >
               AC Milan
             </a>
-            . My wardrobe is mostly Onitsuka Tiger sneakers and DesignByHumans
-            t-shirts — some systems don’t need changing.
+            . My wardrobe remains mostly Onitsuka Tiger sneakers and
+            DesignByHumans T-shirts—some systems don’t need changing.
           </p>
           <Quote>“Build carefully. Stay curious. Keep moving.”</Quote>
         </Story>

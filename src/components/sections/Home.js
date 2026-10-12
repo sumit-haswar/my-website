@@ -21,12 +21,12 @@ const Home = () => (
               >
                 Meta
               </MetaLink>
-              , with a background in distributed systems and platform
-              engineering.
+              , where I turn advances in AI into useful, reliable products. My
+              background is in distributed systems and platform engineering.
             </p>
             <Actions>
-              <PrimaryLink to="/projects/">
-                See my work <span>↗</span>
+              <PrimaryLink to="/resume/">
+                View my experience <span>→</span>
               </PrimaryLink>
               <PlainLink to="/about/">
                 About me <span>→</span>
@@ -36,8 +36,21 @@ const Home = () => (
 
           <NowCard>
             <CardLabel>Right now</CardLabel>
-            <NowIcon>AI</NowIcon>
-            <div>
+            <NowPhoto>
+              <picture>
+                <source
+                  srcSet="/images/sumit-crater-lake-1200.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/images/sumit-crater-lake-1200.jpg"
+                  alt="Sumit at Crater Lake"
+                  loading="eager"
+                  decoding="async"
+                />
+              </picture>
+            </NowPhoto>
+            <NowCopy>
               <h3>
                 Applied AI at{' '}
                 <MetaLink
@@ -52,7 +65,7 @@ const Home = () => (
                 Building at the intersection of intelligent systems and
                 real-world products.
               </p>
-            </div>
+            </NowCopy>
           </NowCard>
         </HeroGrid>
 
@@ -62,7 +75,9 @@ const Home = () => (
               <CardLabel>Selected work</CardLabel>
               <span>↗</span>
             </CardTop>
-            <h3>Experiments in search, data, and software systems.</h3>
+            <h3>
+              Research tools, data pipelines, and reliable software systems.
+            </h3>
             <TagRow>
               <span>Python</span>
               <span>Search</span>
@@ -97,7 +112,7 @@ const Home = () => (
               <i />
               <i />
             </BookStack>
-            <h3>Math, fiction, psychology, and investing.</h3>
+            <h3>Science, stories, human nature, and how the world works.</h3>
           </BooksCard>
 
           <GalleryCard to="/gallery/">
@@ -241,7 +256,7 @@ const NowCard = styled(Card)`
   padding: 28px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 24px;
   overflow: hidden;
   background: ${p => p.theme.color.primary};
 
@@ -256,20 +271,31 @@ const NowCard = styled(Card)`
   }
 `;
 
-const NowIcon = styled.div`
-  width: 132px;
-  height: 132px;
-  display: grid;
-  place-items: center;
-  align-self: center;
-  border-radius: 36px;
-  color: white;
-  background: ${p => p.theme.color.black.regular};
-  font-size: 38px;
-  font-weight: 800;
-  letter-spacing: -0.08em;
-  transform: rotate(-5deg);
-  box-shadow: 18px 18px 0 ${p => p.theme.color.accentLight};
+const NowPhoto = styled.div`
+  height: 250px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: ${p => p.theme.color.white.dark};
+
+  picture,
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  img {
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  @media (max-width: ${p => p.theme.screen.md}) {
+    height: clamp(260px, 55vw, 420px);
+  }
+`;
+
+const NowCopy = styled.div`
+  margin-top: auto;
 `;
 
 const BentoGrid = styled.div`

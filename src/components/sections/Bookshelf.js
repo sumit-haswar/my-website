@@ -95,11 +95,168 @@ const BOOKS = [
     description:
       'Buffett’s shareholder letters arranged by theme, covering business ownership, capital allocation, governance, and long-term thinking.',
   },
+  {
+    title: 'To Kill a Mockingbird',
+    author: 'Harper Lee',
+    category: 'Fiction',
+    description:
+      'A child’s view of justice, prejudice, and moral courage in a small Alabama town confronting a deeply unequal system.',
+  },
+  {
+    title: 'Sapiens',
+    author: 'Yuval Noah Harari',
+    category: 'History',
+    description:
+      'A sweeping account of how shared stories, cooperation, and technological change shaped the history of humankind.',
+  },
+  {
+    title: 'Homo Deus',
+    author: 'Yuval Noah Harari',
+    category: 'Futures',
+    description:
+      'An exploration of the ambitions, technologies, and ethical questions that may shape humanity’s next chapter.',
+  },
+  {
+    title:
+      'The Varieties of Scientific Experience: A Personal View of the Search for God',
+    author: 'Carl Sagan',
+    category: 'Science & philosophy',
+    description:
+      'Sagan considers spirituality, the search for meaning, and what a scientific view of the cosmos can teach us about belief.',
+  },
+  {
+    title: 'The Dragons of Eden',
+    author: 'Carl Sagan',
+    category: 'Science',
+    description:
+      'A lively journey through the evolution of human intelligence, connecting neuroscience, anthropology, and speculation.',
+  },
+  {
+    title: 'Shadows of Forgotten Ancestors',
+    author: 'Carl Sagan & Ann Druyan',
+    category: 'Science',
+    description:
+      'A wide-ranging story of human origins that traces our behavior and emotions through the long arc of evolution.',
+  },
+  {
+    title: 'Fermat’s Enigma',
+    author: 'Simon Singh',
+    category: 'Mathematics',
+    description:
+      'The centuries-long pursuit of Fermat’s Last Theorem, told through the mathematicians, breakthroughs, and setbacks behind its proof.',
+  },
+  {
+    title: 'Stories of Your Life and Others',
+    author: 'Ted Chiang',
+    category: 'Science fiction',
+    description:
+      'Eight precise, imaginative stories about language, time, faith, intelligence, and the consequences of truly understanding an idea.',
+  },
+  {
+    title: 'All Quiet on the Western Front',
+    author: 'Erich Maria Remarque',
+    category: 'Fiction',
+    description:
+      'A stark account of young soldiers confronting the physical and psychological devastation of the First World War.',
+  },
+  {
+    title: 'The Money Game',
+    author: 'Adam Smith',
+    category: 'Finance',
+    description:
+      'A witty look at markets and the people inside them, exposing the psychology, incentives, and group behavior behind investing.',
+  },
+  {
+    title: 'Liar’s Poker',
+    author: 'Michael Lewis',
+    category: 'Finance',
+    description:
+      'A sharp firsthand account of Wall Street’s bond-trading culture during the excesses and transformations of the 1980s.',
+  },
+  {
+    title: 'The Metamorphosis',
+    author: 'Franz Kafka',
+    category: 'Fiction',
+    description:
+      'Kafka’s unsettling story of alienation, obligation, and identity begins when Gregor Samsa wakes to an impossible transformation.',
+  },
+  {
+    title: 'Surely You’re Joking, Mr. Feynman!',
+    author: 'Richard P. Feynman',
+    category: 'Memoir',
+    description:
+      'Curious, playful stories from a physicist who approached science, art, puzzles, and everyday life as experiments worth pursuing.',
+  },
+  {
+    title: 'The Witcher Saga',
+    author: 'Andrzej Sapkowski',
+    category: 'Fantasy series',
+    description:
+      'Geralt of Rivia’s journey begins in folklore-inspired short stories and grows into a sweeping saga of destiny, war, and found family.',
+    volumes: [
+      'The Last Wish',
+      'Sword of Destiny',
+      'Blood of Elves',
+      'Time of Contempt',
+      'Baptism of Fire',
+      'The Tower of Swallows',
+      'The Lady of the Lake',
+    ],
+  },
 ].map(book => ({
   ...book,
   url: `https://books.google.com/books?q=${encodeURIComponent(
     `${book.title} ${book.author}`
   )}`,
+}));
+
+const BOOK_GROUPS = [
+  {
+    title: 'Science, mathematics & ideas',
+    books: [
+      'Fermat’s Enigma',
+      'The Varieties of Scientific Experience: A Personal View of the Search for God',
+      'The Dragons of Eden',
+      'The Man Who Knew Infinity',
+      'Shadows of Forgotten Ancestors',
+      'Surely You’re Joking, Mr. Feynman!',
+      'A Mathematician’s Apology',
+      'The Man Who Loved Only Numbers',
+    ],
+  },
+  {
+    title: 'Human nature & history',
+    books: ['Sapiens', 'Man’s Search for Meaning', 'Homo Deus'],
+  },
+  {
+    title: 'Fiction & imagined worlds',
+    books: [
+      'Stories of Your Life and Others',
+      'To Kill a Mockingbird',
+      'Do Androids Dream of Electric Sheep?',
+      'Of Mice and Men',
+      'The Hyperion Cantos',
+      'The Metamorphosis',
+      'Cat’s Cradle',
+      'All Quiet on the Western Front',
+      'The Witcher Saga',
+    ],
+  },
+  {
+    title: 'Markets & investing',
+    books: [
+      'The Money Game',
+      'Liar’s Poker',
+      'The Big Short',
+      'One Up on Wall Street',
+      'The Little Book That Beats the Market',
+      'Value Investing: From Graham to Buffett and Beyond',
+      'The Essays of Warren Buffett',
+    ],
+  },
+].map(group => ({
+  ...group,
+  books: group.books.map(title => BOOKS.find(book => book.title === title)),
 }));
 
 const Bookshelf = () => (
@@ -109,34 +266,55 @@ const Bookshelf = () => (
         <Kicker>Bookshelf</Kicker>
         <h1>Books I keep thinking about.</h1>
         <p>
-          Mathematics and science fiction sit next to psychology and investing.
-          Each book below includes a short note and a path to learn more.
+          A shelf shaped by curiosity—stories about people and imagined worlds,
+          ideas from science and mathematics, and lessons from history and
+          markets. Each book includes a short note and a path to learn more.
         </p>
       </PageIntro>
 
-      <Shelf>
-        {BOOKS.map((book, index) => (
-          <Book
-            key={book.title}
-            href={book.url}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <BookNumber>{String(index + 1).padStart(2, '0')}</BookNumber>
-            <BookContent>
-              <Meta>
-                <span>{book.category}</span>
-                <span>{book.author}</span>
-              </Meta>
-              <h2>{book.title}</h2>
-              <p>{book.description}</p>
-              <LearnMore>
-                Explore the book <span>↗</span>
-              </LearnMore>
-            </BookContent>
-          </Book>
+      <BookGroups>
+        {BOOK_GROUPS.map(group => (
+          <BookGroup key={group.title}>
+            <GroupTitle>{group.title}</GroupTitle>
+            <Shelf>
+              {group.books.map(book => (
+                <Book
+                  key={book.title}
+                  href={book.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  $isSeries={Boolean(book.volumes)}
+                >
+                  <BookContent>
+                    <Meta>
+                      <span>{book.category}</span>
+                      <span>{book.author}</span>
+                    </Meta>
+                    <h3>{book.title}</h3>
+                    <p>{book.description}</p>
+                    {book.volumes && (
+                      <VolumeList aria-label="Books in The Witcher Saga">
+                        {book.volumes.map((volume, volumeIndex) => (
+                          <li key={volume}>
+                            <span>
+                              {String(volumeIndex + 1).padStart(2, '0')}
+                            </span>
+                            {volume}
+                          </li>
+                        ))}
+                      </VolumeList>
+                    )}
+                    <LearnMore>
+                      Explore {book.volumes ? 'the series' : 'the book'}{' '}
+                      <span>↗</span>
+                    </LearnMore>
+                  </BookContent>
+                </Book>
+              ))}
+            </Shelf>
+          </BookGroup>
         ))}
-      </Shelf>
+      </BookGroups>
     </Container>
   </Section>
 );
@@ -166,6 +344,25 @@ const PageIntro = styled.header`
   }
 `;
 
+const BookGroups = styled.div`
+  display: grid;
+  gap: 72px;
+
+  @media (max-width: ${p => p.theme.screen.sm}) {
+    gap: 56px;
+  }
+`;
+
+const BookGroup = styled.section``;
+
+const GroupTitle = styled.h2`
+  margin: 0 0 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(22, 22, 20, 0.12);
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.2;
+`;
+
 const Shelf = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -177,10 +374,9 @@ const Shelf = styled.div`
 `;
 
 const Book = styled.a`
-  min-height: 330px;
-  display: grid;
-  grid-template-columns: 32px 1fr;
-  gap: 18px;
+  min-height: 250px;
+  grid-column: ${p => (p.$isSeries ? '1 / -1' : 'auto')};
+  display: block;
   padding: 26px;
   border: 1px solid rgba(22, 22, 20, 0.1);
   border-radius: 22px;
@@ -197,18 +393,42 @@ const Book = styled.a`
     transform: translateY(-3px);
     box-shadow: 0 16px 42px rgba(22, 22, 20, 0.08);
   }
+
+  @media (max-width: ${p => p.theme.screen.sm}) {
+    min-height: 0;
+  }
 `;
 
-const BookNumber = styled.span`
-  color: ${p => p.theme.color.black.lighter};
-  font-size: 11px;
-  font-weight: 800;
+const VolumeList = styled.ol`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 10px 24px;
+  margin: 24px 0 8px;
+  padding: 20px 0 0;
+  border-top: 1px solid rgba(22, 22, 20, 0.1);
+  list-style: none;
+
+  li {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+
+  span {
+    color: ${p => p.theme.color.accent};
+    font-size: 10px;
+    line-height: 1.8;
+    font-weight: 800;
+  }
 `;
 
 const BookContent = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
-  h2 {
+  h3 {
     margin: 34px 0 16px;
     font-size: 24px;
     line-height: 1.2;
